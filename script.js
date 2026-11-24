@@ -1,7 +1,5 @@
-// CART COUNT
 let cartCount = 0;
 
-// CART UPDATE
 function updateCart() {
     const cart = document.querySelector(".cart");
 
@@ -10,7 +8,7 @@ function updateCart() {
     }
 }
 
-// ADD BUTTON FUNCTION
+
 function addButtonFunction(button) {
 
     let quantity = 0;
@@ -67,8 +65,30 @@ function addButtonFunction(button) {
     };
 }
 
-
-// ALL PRODUCT ADD BUTTONS
 document.querySelectorAll(".add-btn, .drink-add-btn").forEach(button => {
     addButtonFunction(button);
+});
+
+// SHOP NOW BUTTON
+document.querySelector(".stock-up-btn").addEventListener("click", function(e) {
+    e.preventDefault();
+
+    document.querySelector(".category-section").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
+
+// ORDER NOW BUTTON
+document.querySelectorAll(".promo-btn").forEach(function(button) {
+
+    button.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        let category = this.closest(".promo-card").querySelector("h2").innerText;
+
+        alert("Thank you for choosing " + category + "!");
+
+    });
+
 });

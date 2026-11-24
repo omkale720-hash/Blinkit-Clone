@@ -1204,3 +1204,275 @@ header {
 .quantity-btn .quantity {
     font-size: 14px;
 }
+
+/* ================= Promo Banners Section ================= */
+.promo-banners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1280px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+.promo-card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 195px;
+  border-radius: 16px;
+  padding: 22px 20px;
+  overflow: hidden;
+}
+
+/* Card Background Colors */
+.promo-pharmacy {
+  background: linear-gradient(135deg, #12a8b8 0%, #0d8d9c 100%);
+  color: #ffffff;
+}
+
+.promo-pet {
+  background: linear-gradient(135deg, #f8d428 0%, #eab90c 100%);
+  color: #1c1c1c;
+}
+
+.promo-baby {
+  background: linear-gradient(135deg, #dce6f7 0%, #c7d6ef 100%);
+  color: #1c1c1c;
+}
+
+/* Text & Button Area */
+.promo-content {
+  position: relative;
+  z-index: 2;
+  max-width: 58%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.promo-content h2 {
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.promo-content p {
+  font-size: 13px;
+  line-height: 1.35;
+  margin-bottom: 14px;
+  opacity: 0.92;
+}
+
+/* ================= Full Background Promo Banners ================= */
+.promo-banners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1280px;
+  margin: 20px auto;
+  padding: 0 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.promo-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 205px;
+  border-radius: 16px;
+  padding: 22px 20px;
+  overflow: hidden;
+}
+
+/* Full Background Image */
+.promo-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  z-index: 0;
+}
+
+/* Gradient Overlay so Text stays clear on left & image blends smoothly */
+.promo-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.promo-pharmacy .promo-overlay {
+  background: linear-gradient(90deg, #0d9aa8 0%, rgba(13, 154, 168, 0.88) 52%, rgba(13, 154, 168, 0.18) 100%);
+}
+
+.promo-pet .promo-overlay {
+  background: linear-gradient(90deg, #d3c051 0%, rgba(226, 202, 80, 0.9) 52%, rgba(245, 207, 27, 0.18) 100%);
+}
+
+.promo-baby .promo-overlay {
+  background: linear-gradient(90deg, #d7e2f5 0%, rgba(215, 226, 245, 0.90) 52%, rgba(215, 226, 245, 0.20) 100%);
+}
+
+/* Text & Button Above Image */
+.promo-content {
+  position: relative;
+  z-index: 2;
+  max-width: 62%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.promo-pharmacy .promo-content {
+  color: #ffffff;
+}
+
+.promo-pet .promo-content,
+.promo-baby .promo-content {
+  color: #1c1c1c;
+}
+
+.promo-content h2 {
+  font-size: 21px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.promo-content p {
+  font-size: 13px;
+  line-height: 1.35;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+.promo-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.promo-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.btn-light {
+  background-color: #ffffff;
+  color: #1c1c1c;
+}
+
+.btn-dark {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .promo-banners {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= Stock Up Hero Banner ================= */
+.stock-up-banner {
+  position: relative;
+  max-width: 1280px;
+  min-height: 235px;
+  margin: 18px auto 22px;
+  padding: 28px 36px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #247829 0%, #379234 55%, #8ec63f 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.stock-up-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  z-index: 0;
+}
+
+.stock-up-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(27, 114, 34, 0.94) 0%,
+    rgba(39, 134, 43, 0.78) 46%,
+    rgba(130, 194, 58, 0.08) 100%
+  );
+  z-index: 1;
+}
+
+.stock-up-content {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  color: #ffffff;
+}
+
+.stock-up-content h1 {
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+.stock-up-content p {
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-bottom: 18px;
+  color: #f3fff3;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.stock-up-btn {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #1c1c1c;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.stock-up-btn:hover {
+  background-color: #f2f5f2;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .stock-up-banner {
+    min-height: 190px;
+    padding: 20px;
+    margin: 14px 12px 18px;
+  }
+
+  .stock-up-content h1 {
+    font-size: 22px;
+  }
+
+  .stock-up-content p {
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+}
